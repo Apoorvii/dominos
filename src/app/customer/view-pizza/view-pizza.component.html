@@ -1,0 +1,136 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous"> 
+    </head>
+    <body>
+        <nav class="navbar bg-dark navbar-expand-lg navbar-dark">
+            <span class="navbar-brand mb-0"><mat-icon>home</mat-icon>Home</span>
+            <div class="collapse navbar-collapse">
+            <a [routerLink]="['/']">MyProfile</a>
+            <a [routerLink]="['/viewPizza']">view pizzza</a>
+            <a [routerLink]="['/sploffers']">special offers</a>
+            <a [routerLink]="['/addPizza']">ordered</a>
+            
+            <div *ngIf="isLoggdIn">
+              <a  (click)="OnLogOut()">logOut</a>
+            </div>
+            <mat-icon>add_shopping_cart</mat-icon>
+          </div>
+        </nav>
+        
+        <div class="pizza-head">
+            <h1 style=" text-align: center; font-size:50px;padding-top: 30px; color: black;" class="offer">Our Pizza Collections...</h1>
+        </div>
+
+        <div class="container my-5" id="famous" >
+           <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-6">
+                <div class="card" >
+                    <img src="../../../assets/list/24.jpg" class="card-img-top">
+                 <div class="card-body">
+                   <h2 class="card-title" style="text-align: center;">Margherita</h2>
+                   <p>190Rs.</p>
+                   <button type="button" class="btn btn-outline-danger" [routerLink]="['/addPizza']" >+Add</button>
+                 </div>
+                </div>
+             </div><br>
+
+             <div class="col-lg-4 col-md-4 col-sm-6">
+                <div class="card" >
+                    <img src="../../../assets/list/19.jpg" class="card-img-top">
+                 <div class="card-body">
+                   <h2 class="card-title" style="text-align: center;">Double Cheese Margherita</h2>
+                   <p>190Rs.</p>
+                   <button type="button" class="btn btn-outline-danger" [routerLink]="['/addPizza']" >+Add</button>
+                 </div>
+                </div>
+             </div><br>
+
+             <div class="col-lg-4 col-md-4 col-sm-6">
+                <div class="card" >
+                    <img src="../../../assets/list/21.jpg" class="card-img-top">
+                 <div class="card-body">
+                   <h2 class="card-title" style="text-align: center;">Veggie Paradise</h2>
+                   <p>190Rs.</p>
+                   <button type="button" class="btn btn-outline-danger" [routerLink]="['/addPizza']">+Add</button>
+                 </div>
+                </div>
+             </div>
+
+             <div class="col-lg-4 col-md-4 col-sm-6">
+                <div class="card" >
+                    <img src="../../../assets/list/16.jpg" class="card-img-top">
+                 <div class="card-body">
+                   <h2 class="card-title" style="text-align: center;">Peppy Paneer</h2>
+                   <p>190Rs.</p>
+                   <button type="button" class="btn btn-outline-danger" [routerLink]="['/addPizza']">+Add</button>
+                 </div>
+                </div>
+             </div>
+
+             <div class="col-lg-4 col-md-4 col-sm-6">
+                <div class="card" >
+                    <img src="../../../assets/list/17.jpg" class="card-img-top">
+                 <div class="card-body">
+                   <h2 class="card-title" style="text-align: center;">Mexican Green Wave</h2>
+                   <p>190Rs.</p>
+                   <button type="button" class="btn btn-outline-danger" [routerLink]="['/addPizza']">+Add</button>
+                 </div>
+                </div>
+             </div>
+
+             <div class="col-lg-4 col-md-4 col-sm-6">
+                <div class="card" >
+                    <img src="../../../assets/list/22.jpg" class="card-img-top">
+                 <div class="card-body">
+                   <h2 class="card-title" style="text-align: center;">Cheese and Corn</h2>
+                   <p>190Rs.</p>
+                   <button type="button" class="btn btn-outline-danger" [routerLink]="['/addPizza']">+Add</button>
+                 </div>
+                </div>
+             </div>
+
+             <div class="col-lg-4 col-md-4 col-sm-6">
+                <div class="card" >
+                    <img src="../../../assets/list/18.jpg" class="card-img-top">
+                 <div class="card-body">
+                   <h2 class="card-title" style="text-align: center;">Veg Extravaganza</h2>
+                   <p>190Rs.</p>
+                   <button type="button" class="btn btn-outline-danger" [routerLink]="['/addPizza']">+Add</button>
+                 </div>
+                </div>
+             </div>
+
+             <div class="col-lg-4 col-md-4 col-sm-6">
+                <div class="card" >
+                    <img src="../../../assets/list/23.jpg" class="card-img-top">
+                 <div class="card-body">
+                   <h2 class="card-title" style="text-align: center;">Paneer Makhani</h2>
+                   <p>190Rs.</p>
+                   <button type="button" class="btn btn-outline-danger" [routerLink]="['/addPizza']">+Add</button>
+                 </div>
+                </div>
+             </div>
+
+             <div class="col-lg-4 col-md-4 col-sm-6">
+                <div class="card" >
+                    <img src="../../../assets/list/20.jpg" class="card-img-top">
+                 <div class="card-body">
+                   <h2 class="card-title" style="text-align: center;">Fresh Veggie</h2>
+                   <p>190Rs.</p>
+                   <button type="button" class="btn btn-outline-danger" [routerLink]="['/addPizza']">+Add</button>
+                 </div>
+                </div>
+             </div>
+  
+            </div>  
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+
+    </body>
+</html>

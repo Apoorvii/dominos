@@ -1,0 +1,40 @@
+
+.navbar-brand
+{
+    font-size: 40px;
+    margin-left: 100px;
+}
+
+nav a
+{
+    text-decoration: none;
+    color: gray;
+    margin-left: 55px;
+}
+span
+{
+    padding-right: 35rem;
+}
+body
+{
+    background-image: url('../../../assets/list/43.jpg');
+    
+}
+.card{
+    margin-bottom: 25px;
+}
+button
+{
+    margin-left: 320px;
+}
+@import '~ngx-toastr/toastr';
+p{
+    font-weight:bold ;
+    margin-top: 50px;
+    text-align: center;
+}
+mat-icon
+{
+    margin-left: 15px;
+    color: white;
+}

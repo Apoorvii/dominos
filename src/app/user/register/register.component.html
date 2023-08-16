@@ -1,0 +1,57 @@
+<div class="container">
+<mat-card style="background-color: rgb(228, 220, 220);">
+    <mat-card-title style="text-align: center;">User Registration</mat-card-title>
+    
+    <mat-card-content>
+        
+        <form [formGroup]="register" method="post">
+            <mat-form-field style="margin-left:55px">
+                <mat-label>name</mat-label>
+                <input style="width: 100%;" matInput type="text" formControlName="name" name="name">
+                <mat-hint align="end">Not more then 20 characters .</mat-hint>
+                <mat-error *ngIf="notValid('name', 'required')">Name is required .</mat-error>
+            </mat-form-field><br>
+
+            <mat-form-field style="margin-left:55px">
+                <mat-label>email</mat-label>
+                <input matInput type="text" formControlName="email" name="email">
+                <mat-hint align="end">Enter valid email</mat-hint>
+                <mat-error *ngIf="notValid('email', 'required')">email is required .</mat-error>
+
+            </mat-form-field><br>
+
+            <mat-form-field style="margin-left:55px">
+                <mat-label>number</mat-label>
+                <input matInput type="text" formControlName="number" name="number">
+                <mat-hint align="end"></mat-hint>
+                <mat-error *ngIf="notValid('number', 'required')">Number is required</mat-error>
+
+            </mat-form-field><br>
+
+            <mat-form-field style="margin-left:55px">
+                <mat-label>password</mat-label>
+                <input matInput type="text" formControlName="password" name="password">
+                <mat-hint align="end"></mat-hint>
+                <mat-error *ngIf="notValid('password', 'required')">password is required</mat-error>
+
+            </mat-form-field><br>
+
+            <mat-form-field style="margin-left:55px">
+                <mat-label>cpassword</mat-label>
+                <input matInput type="text" formControlName="cpassword" name="cpassword">
+                <mat-hint align="end"></mat-hint>
+                <mat-error *ngIf="notValid('cpassword', 'required')">confirm password is required</mat-error>
+
+            </mat-form-field><br>
+
+            <button mat-raised-button style="margin-left:100px" (click)="onSubmit()">register</button>
+            
+        </form>
+    </mat-card-content>
+    <p>already have account?please login</p>
+    <button mat-raised-button [routerLink]="['/login']">login</button>
+    
+    <button mat-raised-button [routerLink]="['..']" style="margin-left:150px">go back</button>
+</mat-card>
+
+</div>
