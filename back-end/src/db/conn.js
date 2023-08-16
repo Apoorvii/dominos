@@ -1,0 +1,6 @@
+const mongoose=require('mongoose')
+mongoose.connect('mongodb+srv://dominos:dominos@cluster.0dbgexs.mongodb.net/?retryWrites=true&w=majority')
+// mongoose.connect('mongodb://localhost:27017/app')
+.then(()=>console.log('database is conected'))
+.catch((err)=>console.log(err))
+.finally(()=>console.log('completed'))
